@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		VK stena
+	</title>
+
+	<style type="text/css">
+		body {
+			background-color: #e8eaed;
+			font-family: sans-serif;
+			margin: 0;
+		}
+		.header {
+			background-color: #4277a5;
+		}
+		.logo {
+			color: white;
+		}
+		.logo p {
+			font-size: 1.4em;
+			font-weight: bold;
+		}
+		.logo a {
+			text-decoration: none;
+			outline: none;
+			color: inherit;
+		}
+
+		.search {
+
+			background-color: #384967;
+			height: 5vh;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: 12em;
+			border-radius: 2em;
+			justify-content: space-around;
+
+
+		}
+		.search img {
+			height: 55%;
+		}
+		.search input {
+			height: 50%;
+			background-color: #edeeee00;
+			border: 0px;
+			outline: none;
+		}
+
+		.container {
+			margin-top: 2em;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			padding-inline: 8em;
+
+		}
+		.left-block {
+			width: 16%;
+			color: #42515e;
+		}
+		.center-block {
+			width: 50%;
+			background-color: white;
+		}
+		.center-block .head {
+			background-color: #fbfaff;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
+		.nav {
+			display: flex;
+			flex-direction: row;
+		}
+		.head .block {
+			display: flex;
+
+		}
+		.find {
+			justify-content: flex-end;
+		}
+
+		.right-block {
+		}
+		.friend-name {
+			border-top: 0.2px solid rgba(0,0,0,0.34);
+
+		}
+		.friend-name input {
+			background-color: #edeeee00;
+			border: 0px;
+			outline: none;
+			height: 100%;
+			width: 16em;
+		}
+
+		.friend-list {
+			padding: 1em;
+		}
+
+
+		.friend-list .image {
+			width: 4em;
+			height: 4em;
+		}
+		.friend-list img {
+			width: 100%;
+			height: 100%;
+			border-radius: 100px;
+		}
+		.friend-list .block {
+			display: flex;
+			margin-top: 2em;
+			border-top: 0.5px solid #a3a3a3;
+		}
+		.friend-list .block:first-child {
+			margin-top: 0;
+		}
+
+		.friend list .image, .info, .dots {
+			margin-top: 1em;
+		}
+		.block .info {
+			margin-left: 1em;
+		}
+		.block .info a {
+			text-decoration: none;
+			outline: none;
+			color: #5f7d97;
+
+		}
+		.block .info p {
+			color: #a3a3a3;
+		}
+
+		.block .info button {
+			background-color: transparent ;
+			color: #677e95;
+			border: 0;
+		}
+		.dots button {
+			background-color: transparent ;
+			color: #677e95;
+			border: 0;
+		}
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+		<div class="header">
+			<div class="nav">
+				<div class="logo">
+					<p><a href="#">VK</a></p>
+				</div>
+				<div class="search">
+					<img src="search.png" alt="">
+					<input type="text" placeholder="Поиск"></input>
+				</div>
+				
+			</div>
+		</div>
+		<div class="container">
+			<div class="left-block">
+				<p>Моя страница</p>
+				<p>Новости</p>
+				<p>Сообещние</p>
+				<p>Друзья</p>
+				<p>Группы</p>
+				<p>Фотографии</p>
+				<p>Музыка</p>
+				<p>Видео</p>
+			</div>
+			<div class="center-block">
+				<div class="head">
+					<div class="nav">
+						<div class="block">
+							<p>Все друзья</p>
+							<p>1331</p>
+						</div>
+						<div class="block">
+							<p>Друзья онлайн</p>
+							<p>54</p>
+						</div>
+					</div>
+					<div class="find">
+						<button>Найти друзей</button>
+					</div>
+					
+				</div>
+				<div class="friend-name">
+					<img src="search.png" alt="">
+					<input type="text" placeholder="Начните вводить имя друга">
+				</div>
+				<div class="friend-list">
+					<div class="block">
+						<div class="image">
+							<img src="avatar2.jpeg" alt="">
+						</div>
+						<div class="info">
+							<b><a href="">Елдар Хасен</a></b>
+							<p>МУИТ (IITU)</p>
+							<button>Написать сообщение</button>
+						</div>
+						<div class="dots"><button>...</button></div>
+						
+					</div>
+
+
+					<div class="block">
+						<div class="image">
+							<img src="avatar2.jpeg" alt="">
+						</div>
+						<div class="info">
+							<b><a href="">Елдар Хасен</a></b>
+							<p>МУИТ (IITU)</p>
+							<button>Написать сообщение</button>
+						</div>
+						<div class="dots"><button>...</button></div>
+
+					</div>
+
+
+					<div class="block">
+						<div class="image">
+							<img src="avatar2.jpeg" alt="">
+						</div>
+						<div class="info">
+							<b><a href="">Елдар Хасен</a></b>
+							<p>МУИТ (IITU)</p>
+							<button>Написать сообщение</button>
+						</div>
+						<div class="dots"><button>...</button></div>
+
+					</div>
+
+
+					<div class="block">
+						<div class="image">
+							<img src="avatar2.jpeg" alt="">
+						</div>
+						<div class="info">
+							<b><a href="">Елдар Хасен</a></b>
+							<p>МУИТ (IITU)</p>
+							<button>Написать сообщение</button>
+						</div>
+						<div class="dots"><button>...</button></div>
+
+					</div>
+
+
+					<div class="block">
+						<div class="image">
+							<img src="avatar2.jpeg" alt="">
+						</div>
+						<div class="info">
+							<b><a href="">Елдар Хасен</a></b>
+							<p>МУИТ (IITU)</p>
+							<button>Написать сообщение</button>
+						</div>
+						<div class="dots"><button>...</button></div>
+
+					</div>
+
+
+					<div class="block">
+						<div class="image">
+							<img src="avatar2.jpeg" alt="">
+						</div>
+						<div class="info">
+							<b><a href="">Елдар Хасен</a></b>
+							<p>МУИТ (IITU)</p>
+							<button>Написать сообщение</button>
+						</div>
+						<div class="dots"><button>...</button></div>
+
+					</div>
+
+
+					<div class="block">
+						<div class="image">
+							<img src="avatar2.jpeg" alt="">
+						</div>
+						<div class="info">
+							<b><a href="">Елдар Хасен</a></b>
+							<p>МУИТ (IITU)</p>
+							<button>Написать сообщение</button>
+						</div>
+						<div class="dots"><button>...</button></div>
+
+					</div>
+
+
+					<div class="block">
+						<div class="image">
+							<img src="avatar2.jpeg" alt="">
+						</div>
+						<div class="info">
+							<b><a href="">Елдар Хасен</a></b>
+							<p>МУИТ (IITU)</p>
+							<button>Написать сообщение</button>
+						</div>
+						<div class="dots"><button>...</button></div>
+
+					</div>
+
+					
+				</div>
+				
+
+			</div>
+
+
+
+			<div class="right-block">
+
+
+			</div>
+
+
+		</div>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		VK stena
+	</title>
+
+	<style type="text/css">
+		body {
+			background-color: #e8eaed;
+			font-family: sans-serif;
+			margin: 0;
+		}
+		.header {
+			background-color: #4277a5;
+		}
+		.logo {
+			color: white;
+		}
+		.logo p {
+			font-size: 1.4em;
+			font-weight: bold;
+		}
+		.logo a {
+			text-decoration: none;
+			outline: none;
+			color: inherit;
+		}
+		.nav {
+			height: 8vh;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+			width: 50%;
+		}
+		.search {
+
+			background-color: #384967;
+			height: 5vh;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: 12em;
+			border-radius: 2em;
+			justify-content: space-around;
+
+
+		}
+		.search img {
+			height: 55%;
+		}
+		.search input {
+			height: 50%;
+			background-color: #edeeee00;
+			border: 0px;
+			outline: none;
+		}
+
+		.container {
+			margin-top: 2em;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			padding-inline: 8em;
+
+		}
+		.left-block {
+			width: 16%;
+			color: #42515e;
+		}
+		.center-block {
+			width: 25%;
+			height: 111vh;
+		}
+		.avatar {
+			background-color: white;
+			min-height: 45vh;
+			padding: 1em;
+
+		}
+		.avatar .image {
+			height: 38vh;
+		}
+		.avatar img {
+			width: 100%;
+			height: 100%;
+		}
+		.edit {
+			margin-top: 5%;
+		}
+		.edit button {
+			width: 100%;
+			height: 6vh ;
+			border-radius: 5px;
+			border: 0px;
+		}
+		.friends {
+			background-color: white;
+			margin-top: 2em;
+			height: 15em;
+		}
+		.count {
+			display: flex;
+			flex-direction: row;
+			margin-left: 1.3em;
+			color: #505565fc;
+		}
+
+		.count :nth-child(2) {
+			margin-left: 0.5em;
+			color: #7c887f;
+		}
+		.friend-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			padding-inline: 1em;
+		}
+		.friend {
+			width: 30%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 1em;
+		}
+		.friends .image {
+			width: 3em;
+			height: 3em;
+		}
+		.friends img {
+			width: 100%;
+			height: 100%;
+			border-radius: 100px;
+		}
+		.friend .text {
+			font-size: 0.7em;
+			margin-top: 1em;
+			color: #42515e;
+		}
+
+		.left p {
+			color: #5e5c5c;
+		}
+
+		.right-block {
+			width: 55%;
+		}
+		.right  p {
+			font-size: small;
+			color: #a3a3a3;
+		}
+		.profile {
+			background-color: white;
+			padding: 0 20px 20px 20px;
+		}
+		.profile-name {
+			display: flex;
+			flex-direction: row;
+			border-bottom: 0.2px solid rgba(0,0,0,0.34);
+			justify-content: space-between;
+
+
+		}
+		.left p {
+			margin-top: 0;
+		}
+		.left h3 {
+			margin-bottom: 0.3em;
+			font-weight: 400;
+		}
+		.info {
+			display: flex;
+		}
+		.info .block {
+			color: #a3a3a3;
+		}
+		.info .block:nth-child(2) {
+			margin-left: 3em;
+			color: #42515e;
+		}
+		.info p {
+			font-size: 0.85em;
+		}
+		.profile-extra-info {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			margin-top: 1em;
+			border-top: 0.2px solid rgba(0,0,0,0.34);
+			padding-top: 1em ;
+		}
+
+		.profile-extra-info .block p {
+			margin-top: 5px;
+			font-size: 0.7em;
+			color: #a8a39d;
+			text-align: center;
+
+		}
+		.profile-extra-info .block b {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #224e75;
+		}
+
+		.left{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		.myPictures {
+			background-color: white;
+			padding: 1px 20px 20px 20px;
+			margin-top: 16px;
+			color: #5e5c5c;
+			font-weight: 300;
+		}
+
+
+		.images {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.images .image {
+			display: flex;
+			flex-basis: 23%;
+
+		}
+
+		.images .image img {
+			display: flex;
+			width: 100%;
+
+
+		}
+
+		.head {
+			display: flex;
+			flex-direction: row;
+
+		}
+		.head .name {
+			margin-left: 1em;
+		}
+
+
+		.head .image {
+			width: 55px;
+			height: 55px;
+		}
+		.head .image img {
+			width: 100%;
+			height: 100%;
+			border-radius: 100px;
+		}
+		.stena {
+			background-color: white;
+			margin-top: 16px;
+			padding: 20px;
+		}
+		.stena .text {
+			color: #5e5c5c;
+			font-weight: 300;
+
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+		<div class="header">
+			<div class="nav">
+				<div class="logo">
+					<p><a href="#">VK</a></p>
+				</div>
+				<div class="search">
+					<img src="search.png" alt="">
+					<input type="text" placeholder="Поиск"></input>
+				</div>
+				
+			</div>
+		</div>
+		<div class="container">
+			<div class="left-block">
+				<p>Моя страница</p>
+				<p>Новости</p>
+				<p>Сообещние</p>
+				<p>Друзья</p>
+				<p>Группы</p>
+				<p>Фотографии</p>
+				<p>Музыка</p>
+				<p>Видео</p>
+			</div>
+			<div class="center-block">
+				<div class="avatar">
+					<div class="image">
+						<img src="avatar.jpeg" alt="">
+					</div>
+
+					<div class="edit">
+						<button>Редактировать</button>
+					</div>
+				</div>
+				<div class="friends">
+					<div class="count">
+						<p>Друзья</p>
+						<p>1331</p>
+					</div>
+					<div class="friend-list">
+
+					<div class="friend">
+						<div class="image">
+							<img src="Alvaro.jpg" alt="">
+						</div>
+						<div class="text">
+							<label>Магжан</label></div>
+					</div>
+					<div class="friend">
+						<div class="image">
+							<img src="Alvaro.jpg" alt="">
+						</div>
+						<div class="text">
+							<label>Жанель</label></div>
+					</div>
+					<div class="friend">
+						<div class="image">
+							<img src="Alvaro.jpg" alt="">
+						</div>
+						<div class="text">
+							<label>Айзат</label>
+						</div>
+					</div>
+					<div class="friend">
+						<div class="image">
+							<img src="Alvaro.jpg" alt="">
+						</div>
+						<div class="text">
+							<label>Елнұр</label>
+						</div>
+					</div>
+					<div class="friend">
+						<div class="image">
+							<img src="Alvaro.jpg" alt="">
+						</div>
+						<div class="text">
+							<label>Ерайдын</label>
+						</div>
+					</div>
+					<div class="friend">
+						<div class="image" id="a">
+							<img src="Alvaro.jpg" alt="">
+						</div>
+						<div class="text">
+							<label for="a">Абылхаир</label>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="right-block">
+				<div class="profile">
+
+					<div class="profile-name">
+
+						<div class="left">
+							<h3>Ilyas Zhuanyshev</h3>
+							<p> Life is good :)</p>
+						</div>
+						<div class="right">
+							<p>Online</p>
+						</div>
+
+					</div>
+
+					<div class="profile-info">
+						<div class="info">
+
+
+							<div class="block">
+								<p>День рождения:</p>
+								<p>Город:</p>
+								<p>Семейное положение:</p>
+								<p>Место работы:</p>
+								<p>Веб-сайт</p>
+							</div>
+							<div class="block">
+								<p>26 мая 1989 г.</p>
+								<p>Алматы</p>
+								<p>женат</p>
+								<p>BITLAB Academy</p>
+								<p>http://www.zhuanyshev.kz</p>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="profile-extra-info">
+
+						<div class="block">
+							<b>1331</b>
+							<p>друг</p>
+						</div>
+						<div class="block">
+							<b>224</b>
+							<p>подписчика</p>
+						</div>
+						<div class="block">
+							<b>95</b>
+							<p>фотографии</p>
+						</div>
+						<div class="block">
+							<b>969</b>
+							<p>видеозаписей</p>
+						</div>
+						<div class="block">
+							<b>809</b>
+							<p>аудиозаписей</p>
+						</div>
+						<div class="block">
+							<b>140</b>
+							<p>страниц</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="myPictures">
+					<p>Мои фотографии</p>
+
+					<div class="images">
+						<div class="image">
+							<img src="mac.jpeg" alt="">
+						</div>
+						<div class="image">
+							<img src="Alvaro.jpg" alt="">
+						</div>
+						<div class="image">
+							<img src="mac.jpeg" alt="">
+						</div>
+						<div class="image">
+							<img src="mac.jpeg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="stena">
+
+					<div class="head">
+						<div class="image">
+							<img src="mac.jpeg" alt="">
+						</div>
+
+						<div class="name">
+							<b>Ilyas Zhuanyshev</b>
+							<p>5 апр в 17:42</p>
+						</div>
+
+
+
+					</div>
+					<div class="text">
+						<p>
+							Выдержка из интервью Льюса Хэмилтона и Тото Вольффа: Вопрос: Себастьян долго ехал за вами - вы ожидали подобного? Льюис Хэмилтон: Да, Себастьян был очень близко.
+							Если бы мы поменялись ролями,  и Себастьян был впереди , то он , возможно, создал отрыва.
+							У Ferrari был выше темп на UltraSoft. На втором отрезке уже мой темп был выше, но я остановился настолбко рано, что не знал, выдержит ли резина. Я не хотел атаковать, чтобы сократить отставание, зная, что я в любом случае не смогу обогнать
+							- я бы только испортил шины и упустил вторую позицию. Оказавшись позади Себастьяна, я постарался
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+</body>
+</html>
